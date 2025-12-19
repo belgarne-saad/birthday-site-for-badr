@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating message icon (top-right) -->
+    <a
+      href="message.html"
+      class="message-icon"
+      data-transition-link
+      aria-label="Open birthday message"
+    >
+      <span class="message-icon__pulse"></span>
+      <svg
+        class="message-icon__glyph"
+        viewBox="0 0 32 24"
+        aria-hidden="true"
+      >
+        <rect
+          x="2"
+          y="3"
+          width="28"
+          height="18"
+          rx="1"
+          ry="1"
+          class="message-icon__rect"
+        />
+        <polyline
+          points="3,4 16,13 29,4"
+          class="message-icon__line"
+        />
+      </svg>
+    </a>
+
+    <!-- Initial gate screen with only the OPEN button -->
+    <div class="gate" id="gate">
+      <button class="open-button" id="openButton">
+        <span class="open-button__label">OPEN</span>
+        <!-- extra elements for cyberpunk border animation -->
+        <span class="open-button__border open-button__border--top"></span>
+        <span class="open-button__border open-button__border--right"></span>
+        <span class="open-button__border open-button__border--bottom"></span>
+        <span class="open-button__border open-button__border--left"></span>
+      </button>
+    </div>
+
+    <!-- Main experience: stars, birthday text, hearts, footer -->
+    <main class="experience" id="experience" aria-hidden="true">
+      <canvas id="starCanvas" class="stars"></canvas>
+
+      <section class="message-layer">
+        <h1 class="birthday-title" id="birthdayTitle" aria-label="Happy Birthday MY LOVE">
+          <!-- letters injected by JavaScript -->
+        </h1>
+
+        <div class="hearts" id="hearts">
+          <!-- SVG hearts (stroke-only) -->
+          <svg
+            class="heart heart--left"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+          >
+            <path
+              class="heart__path"
+              d="M32 56 L10 34 C4 28 4 18 10 12 C16 6 26 8 32 14 C38 8 48 6 54 12 C60 18 60 28 54 34 Z"
+            />
+          </svg>
+
+          <svg
+            class="heart heart--center"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+          >
+            <path
+              class="heart__path"
+              d="M32 56 L10 34 C4 28 4 18 10 12 C16 6 26 8 32 14 C38 8 48 6 54 12 C60 18 60 28 54 34 Z"
+            />
+          </svg>
+
+          <svg
+            class="heart heart--right"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+          >
+            <path
+              class="heart__path"
+              d="M32 56 L10 34 C4 28 4 18 10 12 C16 6 26 8 32 14 C38 8 48 6 54 12 C60 18 60 28 54 34 Z"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="footer__text">Made by Badr 🩷</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
